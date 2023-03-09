@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SpaceToon</string>
+    <string name="welcome_message">Hello , Good Morning</string>
+    <string name="name">Jolly</string>
 </resources>
