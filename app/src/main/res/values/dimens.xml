@@ -2,4 +2,5 @@
 <resources>
     <dimen name="sizeTextTile">20sp</dimen>
     <dimen name="sizeTextBody">16sp</dimen>
+    <dimen name="sizeMarginSmall">8dp</dimen>
 </resources>
