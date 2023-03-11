@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SpaceToon</string>
+    <string name="email_content">sara@gmail.com</string>
+    <string name="password_content">enter your password</string>
+    <string name="forget_password">Forget Password ?</string>
+    <string name="login">Login</string>
+    <string name="or">Or</string>
+    <string name="don_t_have_an_account">Don\'t have an account ?</string>
+    <string name="sign_up">Sign Up</string>
 </resources>
