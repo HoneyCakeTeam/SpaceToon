@@ -2,4 +2,7 @@
     <string name="app_name">SpaceToon</string>
     <string name="welcome_message">Hello , Good Morning</string>
     <string name="name">Jolly</string>
+    <string name="search_here">search here</string>
+    <string name="recommended">Recommended</string>
+    <string name="see_all">see all</string>
 </resources>

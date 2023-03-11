@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,14 +8,100 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/welcome_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/abeezee"
-        android:text="Hello World!"
+        android:layout_marginStart="@dimen/sizeTextBody"
+        android:layout_marginTop="@dimen/sizeTextBody"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/welcome_message"
+        android:textColor="@color/black_200"
         android:textSize="@dimen/sizeTextBody"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sizeTextBody"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/name"
+        android:textColor="@color/black_500"
+        android:textSize="@dimen/sizeTextTile"
+        app:drawableEndCompat="@drawable/baseline_waving_hand_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_message" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profile_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/sizeTextBody"
+        android:layout_marginEnd="@dimen/sizeTextBody"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/circleImageView" />
+
+    <EditText
+        android:id="@+id/search_editText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="@dimen/sizeTextBody"
+        android:background="@drawable/search_shape"
+        android:drawableEnd="@drawable/baseline_search_24"
+        android:hint="@string/search_here"
+        android:paddingStart="@dimen/padding_large"
+        android:paddingEnd="@dimen/padding_large"
+        android:textColorHint="@color/black_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/search_editText"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        >-->
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            >-->
+<!--            -->
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--        -->
+<!--    </androidx.core.widget.NestedScrollView>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/recommended_description_container"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/search_editText"-->
+<!--            android:layout_margin="@dimen/sizeTextBody"-->
+<!--            >-->
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:fontFamily="@font/poppins_semibold"-->
+<!--                android:text="@string/recommended"-->
+<!--                android:textColor="@color/black_400" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/poppins_semibold"-->
+<!--                android:text="@string/see_all"-->
+<!--                android:textColor="@color/black_200"-->
+<!--                app:drawableEndCompat="@drawable/baseline_keyboard_arrow_right_24" />-->
+
+<!--        </LinearLayout>-->
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
