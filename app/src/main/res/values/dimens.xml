@@ -10,4 +10,10 @@
     <dimen name="text_size_normal">14sp</dimen>
     <dimen name="margin_small">8dp</dimen>
     <dimen name="padding_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="edit_text_radius">12dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="button_radius">24dp</dimen>
+    <dimen name="text_size_large">24sp</dimen>
 </resources>
