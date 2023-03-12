@@ -9,4 +9,5 @@
     <color name="black_400">#CC121212</color>
     <color name="black_300">#99121212</color>
     <color name="black_200">#a5a5a5</color>
+    <color name="navigation_color">#FAFAFA</color>
 </resources>

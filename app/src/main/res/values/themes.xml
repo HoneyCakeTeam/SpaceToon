@@ -19,8 +19,19 @@
         <item name="cornerSize">50%</item>
     </style>
 
-    <style name="cardImageStyle" parent="">
+    <style name="cardImageStyle">
         <item name="cornerSize" > 8dp </item>
         <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="cardHeader">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:layout_margin">@dimen/margin_normal</item>
+        <item name="android:textColor">@color/black_500</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+    <style name="cardHeader.seeAllText">
+        <item name="android:textColor">@color/black_200</item>
+        <item name="drawableEndCompat">@drawable/icon_see_all</item>
     </style>
 </resources>
