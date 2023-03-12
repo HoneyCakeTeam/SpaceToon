@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">SpaceToon</string>
-    <string name="email_content">sara@gmail.com</string>
-    <string name="password_content">enter your password</string>
+    <string name="email_content">email</string>
+    <string name="email_helper">you can use letters, numbers &amp; periods</string>
+    <string name="password_content">password</string>
+    <string name="password_helper">use 8 or more characters with a mix of letters, numbers &amp; symbols</string>
     <string name="forget_password">Forget Password ?</string>
     <string name="login">Login</string>
     <string name="or">Or</string>
