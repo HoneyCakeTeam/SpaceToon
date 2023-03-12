@@ -5,4 +5,7 @@
     <string name="search_here">search here</string>
     <string name="recommended">Recommended</string>
     <string name="see_all">see all</string>
+    <string name="trending">Trending</string>
+    <string name="airing_today">Airing Today</string>
+    <string name="adventure">Adventure</string>
 </resources>

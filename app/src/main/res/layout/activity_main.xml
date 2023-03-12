@@ -15,7 +15,7 @@
         android:layout_marginTop="@dimen/sizeTextBody"
         android:fontFamily="@font/poppins_semibold"
         android:text="@string/welcome_message"
-        android:textColor="@color/black_200"
+        android:textColor="@color/black_300"
         android:textSize="@dimen/sizeTextBody"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,7 +30,7 @@
         android:text="@string/name"
         android:textColor="@color/black_500"
         android:textSize="@dimen/sizeTextTile"
-        app:drawableEndCompat="@drawable/baseline_waving_hand_24"
+        app:drawableEndCompat="@drawable/hand_shake"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome_message" />
 
@@ -59,49 +59,418 @@
         android:textColorHint="@color/black_200"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        />
 
-<!--    <androidx.core.widget.NestedScrollView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/search_editText"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        >-->
-<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            >-->
-<!--            -->
-<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
-<!--        -->
-<!--    </androidx.core.widget.NestedScrollView>-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:paddingTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintTop_toBottomOf="@+id/search_editText">
 
-<!--        <LinearLayout-->
-<!--            android:id="@+id/recommended_description_container"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/search_editText"-->
-<!--            android:layout_margin="@dimen/sizeTextBody"-->
-<!--            >-->
-<!--            <TextView-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_weight="1"-->
-<!--                android:fontFamily="@font/poppins_semibold"-->
-<!--                android:text="@string/recommended"-->
-<!--                android:textColor="@color/black_400" />-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/tv_recommended"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recommended"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="16dp"
+                />
+            <TextView
+                android:id="@+id/tv_see_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/see_all"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black_200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="16dp"
+                app:drawableEndCompat="@drawable/baseline_keyboard_arrow_right_24" />
 
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:fontFamily="@font/poppins_semibold"-->
-<!--                android:text="@string/see_all"-->
-<!--                android:textColor="@color/black_200"-->
-<!--                app:drawableEndCompat="@drawable/baseline_keyboard_arrow_right_24" />-->
+            <HorizontalScrollView
+                android:id="@+id/recommended_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_recommended"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                android:scrollbars="none"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="8dp"
+                    >
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/card1"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        style="@style/cardImageStyle"
+                        />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/card2"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        style="@style/cardImageStyle"
+                        android:layout_marginStart="8dp"
+                        />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/card3"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        style="@style/cardImageStyle"
+                        android:layout_marginStart="8dp"
+                        />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/card4"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        style="@style/cardImageStyle"
+                        android:layout_marginStart="8dp"
+                        />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/card5"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        style="@style/cardImageStyle"
+                        android:layout_marginStart="8dp"
+                        />
+                </LinearLayout>
 
-<!--        </LinearLayout>-->
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/tv_trending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/trending"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recommended_section"
+                android:layout_margin="16dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/see_all"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black_200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recommended_section"
+                android:layout_margin="16dp"
+                app:drawableEndCompat="@drawable/baseline_keyboard_arrow_right_24" />
+
+            <HorizontalScrollView
+                android:id="@+id/trending_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_trending"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                android:scrollbars="none"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="8dp"
+                    >
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/image1"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        style="@style/cardImageStyle"
+                        />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/image2"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        style="@style/cardImageStyle"
+                        android:layout_marginStart="8dp"
+                        />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/image3"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        style="@style/cardImageStyle"
+                        android:layout_marginStart="8dp"
+                        />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/image4"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        style="@style/cardImageStyle"
+                        android:layout_marginStart="8dp"
+                        />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/image5"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        style="@style/cardImageStyle"
+                        android:layout_marginStart="8dp"
+                        />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/tv_airing_today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/airing_today"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/trending_section"
+                android:layout_margin="16dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/see_all"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black_200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/trending_section"
+                android:layout_margin="16dp"
+                app:drawableEndCompat="@drawable/baseline_keyboard_arrow_right_24" />
+            <LinearLayout
+                android:id="@+id/airing_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_airing_today"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    >
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="0dp"
+                        android:layout_height="110dp"
+                        style="@style/cardImageStyle"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        android:src="@drawable/im1"
+                        android:layout_weight="1"
+                        />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="0dp"
+                        android:layout_height="110dp"
+                        style="@style/cardImageStyle"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        android:src="@drawable/im2"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="0dp"
+                        android:layout_height="110dp"
+                        style="@style/cardImageStyle"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        android:src="@drawable/im3"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    >
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="0dp"
+                        android:layout_height="110dp"
+                        style="@style/cardImageStyle"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        android:src="@drawable/im4"
+                        android:layout_weight="1"
+                        />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="0dp"
+                        android:layout_height="110dp"
+                        style="@style/cardImageStyle"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        android:src="@drawable/im5"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="0dp"
+                        android:layout_height="110dp"
+                        style="@style/cardImageStyle"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        android:src="@drawable/im6"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
 
 
+            <TextView
+                android:id="@+id/tv_adventure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/adventure"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/airing_section"
+                android:layout_margin="16dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/see_all"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black_200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/airing_section"
+                android:layout_margin="16dp"
+                app:drawableEndCompat="@drawable/baseline_keyboard_arrow_right_24" />
+
+            <HorizontalScrollView
+                android:id="@+id/adventure_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_adventure"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                android:scrollbars="none"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="16dp"
+                    >
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/image7"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        style="@style/cardImageStyle"
+                        />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/card1"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        style="@style/cardImageStyle"
+                        android:layout_marginStart="8dp"
+                        />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/image4"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        style="@style/cardImageStyle"
+                        android:layout_marginStart="8dp"
+                        />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/image5"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        style="@style/cardImageStyle"
+                        android:layout_marginStart="8dp"
+                        />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/card5"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        style="@style/cardImageStyle"
+                        android:layout_marginStart="8dp"
+                        />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
+        android:background="#FAFAFA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/shapeableImageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/shapeableImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+          />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/shapeableImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/movies"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/shapeableImageView3"
+            app:layout_constraintStart_toEndOf="@+id/shapeableImageView2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/shapeableImageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/music"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/shapeableImageView4"
+            app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/shapeableImageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/favourite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/shapeableImageView3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
