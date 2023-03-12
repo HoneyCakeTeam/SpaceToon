@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">SpaceToon</string>
     <string name="text_name">Mo Naser</string>
-    <string name="email">mahmmedn19@gmail.com</string>
+    <string name="email">email@gmail.com</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="theme">Theme</string>
 </resources>
