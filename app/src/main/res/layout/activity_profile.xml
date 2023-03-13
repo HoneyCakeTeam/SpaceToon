@@ -95,7 +95,7 @@
         style="@style/dividerStyle"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        app:dividerColor="@color/black_100"
+        app:dividerColor="@color/white_100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_theme" />
@@ -127,7 +127,7 @@
         style="@style/dividerStyle"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        app:dividerColor="@color/black_100"
+        app:dividerColor="@color/white_100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_language" />
@@ -158,7 +158,7 @@
         style="@style/dividerStyle"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        app:dividerColor="@color/black_100"
+        app:dividerColor="@color/black_400"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_about" />
@@ -189,7 +189,7 @@
         style="@style/dividerStyle"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        app:dividerColor="@color/black_100"
+        app:dividerColor="@color/white_100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_contact" />
@@ -220,7 +220,7 @@
         style="@style/dividerStyle"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        app:dividerColor="@color/black_100"
+        app:dividerColor="@color/white_100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_log_out" />

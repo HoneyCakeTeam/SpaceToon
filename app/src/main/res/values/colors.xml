@@ -4,17 +4,12 @@
     <color name="yellow_400">#FEC371</color>
     <color name="yellow_200">#ffe6c2</color>
     <color name="black">#FF000000</color>
+    <color name="black_700">#DE121212</color>
+    <color name="black_400">#99121212</color>
+    <color name="black_300">#5C121212</color>
+    <color name="black_200">#14121212</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="black_500">#121212</color>
-    <color name="black_400">#CC121212</color>
-    <color name="black_300">#99121212</color>
-    <color name="black_200">#a5a5a5</color>
-    <color name="navigation_color">#FAFAFA</color>
-    <color name="black_86">#DB121212</color>
-    <color name="black_60">#99121212</color>
-    <color name="black_36">#5C121212</color>
-    <color name="black_8">#14121212</color>
-    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#fea82f</color>
-    <color name="black_200">#99121212</color>
-    <color name="black_100">#14121212</color>
+    <color name="white_500">#FAFAFA</color>
+    <color name="white_100">#a5a5a5</color>
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">@color/yellow_500</color>
 </resources>

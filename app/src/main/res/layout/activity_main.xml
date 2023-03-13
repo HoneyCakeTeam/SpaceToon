@@ -11,12 +11,12 @@
         android:id="@+id/welcome_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/sizeTextBody"
-        android:layout_marginTop="@dimen/sizeTextBody"
+        android:layout_marginStart="@dimen/text_size_medium"
+        android:layout_marginTop="@dimen/text_size_medium"
         android:fontFamily="@font/poppins_semibold"
         android:text="@string/welcome_message"
-        android:textColor="@color/black_300"
-        android:textSize="@dimen/sizeTextBody"
+        android:textColor="@color/black_400"
+        android:textSize="@dimen/text_size_medium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,12 +24,12 @@
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/sizeTextBody"
+        android:layout_marginStart="@dimen/text_size_medium"
         android:drawablePadding="@dimen/padding_small"
         android:fontFamily="@font/poppins_semibold"
         android:text="@string/name"
-        android:textColor="@color/black_500"
-        android:textSize="@dimen/sizeTextTile"
+        android:textColor="@color/black_700"
+        android:textSize="@dimen/text_size_large"
         app:drawableEndCompat="@drawable/hand_shake"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome_message" />
@@ -38,8 +38,8 @@
         android:id="@+id/profile_image"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="@dimen/sizeTextBody"
-        android:layout_marginEnd="@dimen/sizeTextBody"
+        android:layout_marginTop="@dimen/text_size_medium"
+        android:layout_marginEnd="@dimen/text_size_medium"
         android:scaleType="centerCrop"
         android:src="@drawable/image7"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,12 +50,12 @@
         android:id="@+id/search_editText"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_margin="@dimen/sizeTextBody"
+        android:layout_margin="@dimen/text_size_medium"
         android:background="@drawable/search_shape"
         android:drawableEnd="@drawable/baseline_search_24"
         android:hint="@string/search_here"
-        android:paddingStart="@dimen/padding_large"
-        android:paddingEnd="@dimen/padding_large"
+        android:paddingStart="@dimen/padding_medium"
+        android:paddingEnd="@dimen/padding_medium"
         android:textColorHint="@color/black_200"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:scrollbars="none"
-        android:paddingTop="@dimen/padding_large"
+        android:paddingTop="@dimen/padding_medium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
@@ -82,7 +82,7 @@
                 style="@style/cardHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginStart="@dimen/margin_medium"
                 android:text="@string/recommended"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -109,7 +109,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/margin_normal"
+                    android:layout_marginHorizontal="@dimen/margin_medium"
                     android:layout_marginVertical="@dimen/margin_small"
                     >
                     <com.google.android.material.imageview.ShapeableImageView
@@ -179,7 +179,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/margin_normal"
+                    android:layout_marginHorizontal="@dimen/margin_medium"
                     android:layout_marginVertical="@dimen/margin_small"
                     >
                     <com.google.android.material.imageview.ShapeableImageView
@@ -247,7 +247,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/margin_normal"
+                    android:layout_marginHorizontal="@dimen/margin_medium"
                     android:layout_marginTop="@dimen/margin_small"
                     >
                     <com.google.android.material.imageview.ShapeableImageView
@@ -281,7 +281,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/margin_normal"
+                    android:layout_marginHorizontal="@dimen/margin_medium"
                     android:layout_marginTop="@dimen/margin_small"
                     >
                     <com.google.android.material.imageview.ShapeableImageView
@@ -344,7 +344,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/margin_normal"
+                    android:layout_marginHorizontal="@dimen/margin_medium"
                     android:layout_marginVertical="@dimen/margin_small"
                     >
                     <com.google.android.material.imageview.ShapeableImageView
@@ -395,7 +395,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingVertical="@dimen/padding_small"
-        android:background="@color/navigation_color"
+        android:background="@color/white_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
