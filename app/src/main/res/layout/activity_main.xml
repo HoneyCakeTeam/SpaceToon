@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,11 +11,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/text_size_medium"
-        android:layout_marginTop="@dimen/text_size_medium"
+        android:layout_marginTop="@dimen/margin_giant"
         android:fontFamily="@font/poppins_semibold"
+        android:paddingBottom="@dimen/padding_small"
         android:text="@string/welcome_message"
         android:textColor="@color/black_400"
         android:textSize="@dimen/text_size_medium"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,6 +31,7 @@
         android:text="@string/name"
         android:textColor="@color/black_700"
         android:textSize="@dimen/text_size_large"
+        android:textStyle="bold"
         app:drawableEndCompat="@drawable/hand_shake"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome_message" />
@@ -42,8 +44,9 @@
         android:layout_marginEnd="@dimen/text_size_medium"
         android:scaleType="centerCrop"
         android:src="@drawable/image7"
+        app:layout_constraintBottom_toBottomOf="@id/welcome_message"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@id/welcome_message"
         app:shapeAppearanceOverlay="@style/circleImageView" />
 
     <EditText
@@ -56,26 +59,24 @@
         android:hint="@string/search_here"
         android:paddingStart="@dimen/padding_medium"
         android:paddingEnd="@dimen/padding_medium"
-        android:textColorHint="@color/black_200"
+        android:textColorHint="@color/black_300"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:scrollbars="none"
         android:paddingTop="@dimen/padding_medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:scrollbars="none"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/search_editText">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/tv_recommended"
@@ -89,81 +90,79 @@
 
             <TextView
                 android:id="@+id/tv_see_all"
+                style="@style/cardHeader.seeAllText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/see_all"
-                style="@style/cardHeader.seeAllText"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <HorizontalScrollView
                 android:id="@+id/recommended_section"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/tv_recommended"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintStart_toEndOf="parent"
                 android:scrollbars="none"
-                >
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_recommended">
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/margin_medium"
-                    android:layout_marginVertical="@dimen/margin_small"
-                    >
+                    android:layout_marginVertical="@dimen/margin_small">
+
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="120dp"
                         android:layout_height="150dp"
                         android:src="@drawable/card1"
-                        app:shapeAppearanceOverlay="@style/cardImageStyle"
-                        />
+                        app:shapeAppearanceOverlay="@style/cardImageStyle" />
+
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="120dp"
                         android:layout_height="150dp"
+                        android:layout_marginStart="@dimen/margin_small"
                         android:src="@drawable/card2"
-                        app:shapeAppearanceOverlay="@style/cardImageStyle"
-                        android:layout_marginStart="@dimen/margin_small"
-                        />
+                        app:shapeAppearanceOverlay="@style/cardImageStyle" />
+
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="120dp"
                         android:layout_height="150dp"
+                        android:layout_marginStart="@dimen/margin_small"
                         android:src="@drawable/card3"
-                        app:shapeAppearanceOverlay="@style/cardImageStyle"
-                        android:layout_marginStart="@dimen/margin_small"
-                        />
+                        app:shapeAppearanceOverlay="@style/cardImageStyle" />
+
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="120dp"
                         android:layout_height="150dp"
+                        android:layout_marginStart="@dimen/margin_small"
                         android:src="@drawable/card4"
-                        app:shapeAppearanceOverlay="@style/cardImageStyle"
-                        android:layout_marginStart="@dimen/margin_small"
-                        />
+                        app:shapeAppearanceOverlay="@style/cardImageStyle" />
+
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="120dp"
                         android:layout_height="150dp"
-                        android:src="@drawable/card5"
-                        app:shapeAppearanceOverlay="@style/cardImageStyle"
                         android:layout_marginStart="@dimen/margin_small"
-                        />
+                        android:src="@drawable/card5"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle" />
                 </LinearLayout>
 
             </HorizontalScrollView>
 
             <TextView
                 android:id="@+id/tv_trending"
+                style="@style/cardHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/trending"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/recommended_section"
-                style="@style/cardHeader"
-                />
+                app:layout_constraintTop_toBottomOf="@id/recommended_section" />
+
             <TextView
+                style="@style/cardHeader.seeAllText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/see_all"
-                style="@style/cardHeader.seeAllText"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/recommended_section" />
 
@@ -171,217 +170,216 @@
                 android:id="@+id/trending_section"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/tv_trending"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintStart_toEndOf="parent"
                 android:scrollbars="none"
-                >
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_trending">
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/margin_medium"
-                    android:layout_marginVertical="@dimen/margin_small"
-                    >
+                    android:layout_marginVertical="@dimen/margin_small">
+
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="120dp"
                         android:layout_height="150dp"
                         android:src="@drawable/image1"
-                        app:shapeAppearanceOverlay="@style/cardImageStyle"
-                        />
+                        app:shapeAppearanceOverlay="@style/cardImageStyle" />
+
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="120dp"
                         android:layout_height="150dp"
+                        android:layout_marginStart="@dimen/margin_small"
                         android:src="@drawable/image2"
-                        app:shapeAppearanceOverlay="@style/cardImageStyle"
-                        android:layout_marginStart="@dimen/margin_small"
-                        />
+                        app:shapeAppearanceOverlay="@style/cardImageStyle" />
+
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="120dp"
                         android:layout_height="150dp"
+                        android:layout_marginStart="@dimen/margin_small"
                         android:src="@drawable/image3"
-                        app:shapeAppearanceOverlay="@style/cardImageStyle"
-                        android:layout_marginStart="@dimen/margin_small"
-                        />
+                        app:shapeAppearanceOverlay="@style/cardImageStyle" />
+
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="120dp"
                         android:layout_height="150dp"
+                        android:layout_marginStart="@dimen/margin_small"
                         android:src="@drawable/image4"
-                        app:shapeAppearanceOverlay="@style/cardImageStyle"
-                        android:layout_marginStart="@dimen/margin_small"
-                        />
+                        app:shapeAppearanceOverlay="@style/cardImageStyle" />
+
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="120dp"
                         android:layout_height="150dp"
-                        android:src="@drawable/image5"
-                        app:shapeAppearanceOverlay="@style/cardImageStyle"
                         android:layout_marginStart="@dimen/margin_small"
-                        />
+                        android:src="@drawable/image5"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle" />
                 </LinearLayout>
 
             </HorizontalScrollView>
 
             <TextView
                 android:id="@+id/tv_airing_today"
+                style="@style/cardHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/airing_today"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/trending_section"
-                style="@style/cardHeader"
-                />
+                app:layout_constraintTop_toBottomOf="@id/trending_section" />
+
             <TextView
+                style="@style/cardHeader.seeAllText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/see_all"
-                style="@style/cardHeader.seeAllText"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/trending_section" />
+
             <LinearLayout
                 android:id="@+id/airing_section"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/tv_airing_today"
-                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:orientation="vertical">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_airing_today">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/margin_medium"
-                    android:layout_marginTop="@dimen/margin_small"
-                    >
+                    android:layout_marginTop="@dimen/margin_small">
+
                     <com.google.android.material.imageview.ShapeableImageView
+                        style="@style/cardImageStyle"
                         android:layout_width="0dp"
                         android:layout_height="110dp"
-                        style="@style/cardImageStyle"
-                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        android:layout_weight="1"
                         android:src="@drawable/im1"
-                        android:layout_weight="1"
-                        />
+                        app:shapeAppearanceOverlay="@style/cardImageStyle" />
+
                     <com.google.android.material.imageview.ShapeableImageView
+                        style="@style/cardImageStyle"
                         android:layout_width="0dp"
                         android:layout_height="110dp"
-                        style="@style/cardImageStyle"
-                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_weight="1"
                         android:src="@drawable/im2"
-                        android:layout_weight="1"
-                        android:layout_marginStart="@dimen/margin_small"
-                        />
+                        app:shapeAppearanceOverlay="@style/cardImageStyle" />
+
                     <com.google.android.material.imageview.ShapeableImageView
+                        style="@style/cardImageStyle"
                         android:layout_width="0dp"
                         android:layout_height="110dp"
-                        style="@style/cardImageStyle"
-                        app:shapeAppearanceOverlay="@style/cardImageStyle"
-                        android:src="@drawable/im3"
-                        android:layout_weight="1"
                         android:layout_marginStart="@dimen/margin_small"
+                        android:layout_weight="1"
+                        android:src="@drawable/im3"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle"
 
                         />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/margin_medium"
-                    android:layout_marginTop="@dimen/margin_small"
-                    >
+                    android:layout_marginTop="@dimen/margin_small">
+
                     <com.google.android.material.imageview.ShapeableImageView
+                        style="@style/cardImageStyle"
                         android:layout_width="0dp"
                         android:layout_height="110dp"
-                        style="@style/cardImageStyle"
-                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        android:layout_weight="1"
                         android:src="@drawable/im4"
-                        android:layout_weight="1"
-                        />
+                        app:shapeAppearanceOverlay="@style/cardImageStyle" />
+
                     <com.google.android.material.imageview.ShapeableImageView
+                        style="@style/cardImageStyle"
                         android:layout_width="0dp"
                         android:layout_height="110dp"
-                        style="@style/cardImageStyle"
-                        app:shapeAppearanceOverlay="@style/cardImageStyle"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_weight="1"
                         android:src="@drawable/im5"
-                        android:layout_weight="1"
-                        android:layout_marginStart="@dimen/margin_small"
-                        />
+                        app:shapeAppearanceOverlay="@style/cardImageStyle" />
+
                     <com.google.android.material.imageview.ShapeableImageView
+                        style="@style/cardImageStyle"
                         android:layout_width="0dp"
                         android:layout_height="110dp"
-                        style="@style/cardImageStyle"
-                        app:shapeAppearanceOverlay="@style/cardImageStyle"
-                        android:src="@drawable/im6"
-                        android:layout_weight="1"
                         android:layout_marginStart="@dimen/margin_small"
-                        />
+                        android:layout_weight="1"
+                        android:src="@drawable/im6"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle" />
                 </LinearLayout>
             </LinearLayout>
 
 
             <TextView
                 android:id="@+id/tv_adventure"
+                style="@style/cardHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/adventure"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/airing_section"
-                style="@style/cardHeader"
-                />
+                app:layout_constraintTop_toBottomOf="@id/airing_section" />
+
             <TextView
+                style="@style/cardHeader.seeAllText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/see_all"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/airing_section"
-                style="@style/cardHeader.seeAllText"
-                />
+                app:layout_constraintTop_toBottomOf="@id/airing_section" />
 
             <HorizontalScrollView
                 android:id="@+id/adventure_section"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/tv_adventure"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintStart_toEndOf="parent"
                 android:scrollbars="none"
-                >
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_adventure">
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/margin_medium"
-                    android:layout_marginVertical="@dimen/margin_small"
-                    >
+                    android:layout_marginVertical="@dimen/margin_small">
+
                     <com.google.android.material.imageview.ShapeableImageView
+                        style="@style/cardImageStyle"
                         android:layout_width="120dp"
                         android:layout_height="150dp"
                         android:src="@drawable/image7"
-                        app:shapeAppearanceOverlay="@style/cardImageStyle"
-                        style="@style/cardImageStyle"
-                        />
+                        app:shapeAppearanceOverlay="@style/cardImageStyle" />
+
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="120dp"
                         android:layout_height="150dp"
+                        android:layout_marginStart="@dimen/margin_small"
                         android:src="@drawable/card1"
-                        app:shapeAppearanceOverlay="@style/cardImageStyle"
-                        android:layout_marginStart="@dimen/margin_small"
-                        />
+                        app:shapeAppearanceOverlay="@style/cardImageStyle" />
+
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="120dp"
                         android:layout_height="150dp"
+                        android:layout_marginStart="@dimen/margin_small"
                         android:src="@drawable/image4"
-                        app:shapeAppearanceOverlay="@style/cardImageStyle"
-                        android:layout_marginStart="@dimen/margin_small"
-                        />
+                        app:shapeAppearanceOverlay="@style/cardImageStyle" />
+
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="120dp"
                         android:layout_height="150dp"
+                        android:layout_marginStart="@dimen/margin_small"
                         android:src="@drawable/image5"
-                        app:shapeAppearanceOverlay="@style/cardImageStyle"
-                        android:layout_marginStart="@dimen/margin_small"
-                        />
+                        app:shapeAppearanceOverlay="@style/cardImageStyle" />
+
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="120dp"
                         android:layout_height="150dp"
-                        android:src="@drawable/card5"
-                        app:shapeAppearanceOverlay="@style/cardImageStyle"
                         android:layout_marginStart="@dimen/margin_small"
-                        />
+                        android:src="@drawable/card5"
+                        app:shapeAppearanceOverlay="@style/cardImageStyle" />
                 </LinearLayout>
 
             </HorizontalScrollView>
@@ -394,8 +392,8 @@
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingVertical="@dimen/padding_small"
         android:background="@color/white_500"
+        android:paddingVertical="@dimen/padding_small"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -408,8 +406,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/shapeableImageView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-          />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/shapeableImageView"

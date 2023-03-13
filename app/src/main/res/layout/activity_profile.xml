@@ -33,9 +33,9 @@
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/shapeableImageView"
         style="@style/roundedImageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/profile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/image7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
@@ -74,7 +74,7 @@
     <TextView
         android:id="@+id/text_theme"
         style="@style/textStyleEdit.Theme"
-        android:drawableStart="@drawable/lightbulb_minimalistic"
+        app:drawableStartCompat="@drawable/lightbulb_minimalistic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,8 +94,6 @@
         android:id="@+id/materialDivider"
         style="@style/dividerStyle"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        app:dividerColor="@color/white_100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_theme" />
@@ -104,8 +102,8 @@
     <TextView
         android:id="@+id/text_language"
         style="@style/textStyleEdit.Theme"
-        android:drawableStart="@drawable/global"
-        android:text="language"
+        android:text="@string/language"
+        app:drawableStartCompat="@drawable/global"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -126,8 +124,6 @@
         android:id="@+id/divider_language"
         style="@style/dividerStyle"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        app:dividerColor="@color/white_100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_language" />
@@ -136,8 +132,8 @@
     <TextView
         android:id="@+id/text_about"
         style="@style/textStyleEdit.Theme"
-        android:drawableStart="@drawable/info_circle"
-        android:text="about"
+        android:text="@string/about"
+        app:drawableStartCompat="@drawable/info_circle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -157,8 +153,6 @@
         android:id="@+id/divider_about"
         style="@style/dividerStyle"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        app:dividerColor="@color/black_400"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_about" />
@@ -167,8 +161,8 @@
     <TextView
         android:id="@+id/text_contact"
         style="@style/textStyleEdit.Theme"
-        android:drawableStart="@drawable/phone_calling"
-        android:text="contact"
+        android:text="@string/contact"
+        app:drawableStartCompat="@drawable/phone_calling"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -188,8 +182,6 @@
         android:id="@+id/divider_contact"
         style="@style/dividerStyle"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        app:dividerColor="@color/white_100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_contact" />
@@ -198,8 +190,8 @@
     <TextView
         android:id="@+id/text_log_out"
         style="@style/textStyleEdit.Theme"
-        android:drawableStart="@drawable/login"
-        android:text="logout"
+        android:text="@string/logout"
+        app:drawableStartCompat="@drawable/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -219,8 +211,6 @@
         android:id="@+id/divider_log_out"
         style="@style/dividerStyle"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        app:dividerColor="@color/white_100"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_log_out" />

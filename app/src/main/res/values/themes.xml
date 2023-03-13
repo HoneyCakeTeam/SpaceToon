@@ -22,7 +22,8 @@
         <item name="boxCornerRadiusTopEnd">12dp</item>
         <item name="boxCornerRadiusTopStart">12dp</item>
         <item name="hintTextColor">@color/black</item>
-        <item name="android:layout_margin">@dimen/margin_medium</item>
+        <item name="android:layout_marginHorizontal">@dimen/margin_medium</item>
+        <item name="android:layout_marginTop">@dimen/margin_small</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">16sp</item>
         <item name="boxStrokeWidth">1dp</item>
@@ -55,7 +56,9 @@
         <item name="android:textSize">@dimen/text_size_normal</item>
     </style>
     <style name="cardHeader.seeAllText">
-        <item name="android:textColor">@color/black_200</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black_400</item>
         <item name="drawableEndCompat">@drawable/icon_see_all</item>
     </style>
 
@@ -77,11 +80,12 @@
     <style name="textStyle.Name">
         <item name="android:textColor">@color/black</item>
         <item name="android:text">@string/text_name</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="textStyle.Email">
-        <item name="android:textColor">@color/black_200</item>
-        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textColor">@color/black_400</item>
+        <item name="android:layout_marginTop">@dimen/margin_small</item>
         <item name="android:fontFamily">@font/abeezee</item>
         <item name="android:text">@string/email</item>
     </style>
@@ -89,7 +93,7 @@
     <style name="textStyleEdit">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:color">@color/black_200</item>
+        <item name="android:color">@color/black_400</item>
         <item name="android:layout_marginStart">16dp</item>
         <item name="android:fontFamily">@font/abeezee</item>
         <item name="android:gravity">center</item>
@@ -110,6 +114,8 @@
 
     <style name="dividerStyle">
         <item name="android:layout_margin">16dp</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="dividerColor">@color/black_200</item>
     </style>
 
 
