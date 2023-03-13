@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">SpaceToon</string>
+    <string name="text_name">Mo Naser</string>
+    <string name="email">email@gmail.com</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="theme">Theme</string>
     <string name="welcome_message">Hello , Good Morning</string>
     <string name="name">Jolly</string>
     <string name="search_here">search here</string>
